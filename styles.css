@@ -1,0 +1,426 @@
+Absolutely — here’s a beautiful, elegant **wedding/marriage invitation card** `style.css` with a romantic gold-and-cream design, floral feel, and responsive mobile layout.
+
+```
+/* ================================
+   WEDDING INVITATION CARD
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  --cream: #fffaf0;
+  --ivory: #fffdf7;
+  --gold: #c89b3c;
+  --dark-gold: #9a7125;
+  --brown: #5c4632;
+  --soft-brown: #806b55;
+  --rose: #b76e79;
+  --border: #d9b96e;
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background:
+    radial-gradient(circle at top left, #fff1d0 0, transparent 35%),
+    radial-gradient(circle at bottom right, #f8dce0 0, transparent 35%),
+    var(--cream);
+  color: var(--brown);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ================================
+   MAIN CARD
+================================ */
+
+.wedding-card {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  min-height: 1000px;
+  padding: 70px 60px;
+  text-align: center;
+  background:
+    linear-gradient(
+      rgba(255, 253, 247, 0.95),
+      rgba(255, 250, 240, 0.95)
+    );
+  border: 2px solid var(--border);
+  box-shadow:
+    0 25px 70px rgba(100, 70, 30, 0.18),
+    inset 0 0 0 8px rgba(200, 155, 60, 0.08);
+  overflow: hidden;
+}
+
+/* Inner decorative border */
+
+.wedding-card::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(200, 155, 60, 0.55);
+  pointer-events: none;
+}
+
+.wedding-card::after {
+  content: "❦";
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: 30px;
+  background: var(--ivory);
+  padding: 0 15px;
+}
+
+/* ================================
+   DECORATIVE FLOWERS
+================================ */
+
+.flower {
+  position: absolute;
+  color: var(--rose);
+  opacity: 0.55;
+  font-size: 55px;
+  pointer-events: none;
+}
+
+.flower-top-left {
+  top: 25px;
+  left: 25px;
+  transform: rotate(-25deg);
+}
+
+.flower-top-right {
+  top: 25px;
+  right: 25px;
+  transform: rotate(25deg);
+}
+
+.flower-bottom-left {
+  bottom: 25px;
+  left: 25px;
+  transform: rotate(25deg);
+}
+
+.flower-bottom-right {
+  bottom: 25px;
+  right: 25px;
+  transform: rotate(-25deg);
+}
+
+/* ================================
+   CONTENT
+================================ */
+
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Small heading */
+
+.invitation-text {
+  margin-top: 25px;
+  margin-bottom: 18px;
+  color: var(--dark-gold);
+  font-size: 14px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Main heading */
+
+.wedding-title {
+  font-family: 'Great Vibes', cursive;
+  color: var(--gold);
+  font-size: clamp(55px, 9vw, 90px);
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* ================================
+   COUPLE NAMES
+================================ */
+
+.couple-names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 7vw, 65px);
+  font-weight: 600;
+  color: var(--brown);
+  line-height: 1.2;
+}
+
+.ampersand {
+  display: block;
+  margin: 8px 0;
+  font-family: 'Great Vibes', cursive;
+  font-size: 45px;
+  font-weight: 400;
+  color: var(--rose);
+}
+
+/* ================================
+   MESSAGE
+================================ */
+
+.invitation-message {
+  max-width: 580px;
+  margin: 30px auto;
+  color: var(--soft-brown);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  line-height: 1.7;
+}
+
+/* ================================
+   DIVIDER
+================================ */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 70%;
+  margin: 35px auto;
+  color: var(--gold);
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--gold)
+  );
+}
+
+.divider::after {
+  background: linear-gradient(
+    to left,
+    transparent,
+    var(--gold)
+  );
+}
+
+.divider span {
+  font-size: 22px;
+}
+
+/* ================================
+   DATE & TIME
+================================ */
+
+.event-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin: 30px auto;
+}
+
+.detail {
+  min-width: 130px;
+}
+
+.detail h3 {
+  color: var(--dark-gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.detail p {
+  margin-top: 5px;
+  color: var(--brown);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.detail-separator {
+  width: 1px;
+  height: 65px;
+  background: var(--border);
+}
+
+/* ================================
+   VENUE
+================================ */
+
+.venue {
+  margin: 30px auto;
+}
+
+.venue h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  color: var(--brown);
+}
+
+.venue p {
+  margin-top: 7px;
+  color: var(--soft-brown);
+  font-size: 15px;
+}
+
+/* ================================
+   RSVP BUTTON
+================================ */
+
+.rsvp-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 32px;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  background: linear-gradient(
+    135deg,
+    #d6ad58,
+    #b8872d
+  );
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(150, 105, 35, 0.2);
+  transition: all 0.3s ease;
+}
+
+.rsvp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(150, 105, 35, 0.3);
+  background: linear-gradient(
+    135deg,
+    #b8872d,
+    #d6ad58
+  );
+}
+
+/* ================================
+   FOOTER QUOTE
+================================ */
+
+.quote {
+  margin-top: 45px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 27px;
+  color: var(--rose);
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .wedding-card {
+    min-height: auto;
+    padding: 65px 25px 55px;
+  }
+
+  .wedding-card::before {
+    inset: 10px;
+  }
+
+  .flower {
+    font-size: 38px;
+  }
+
+  .flower-top-left,
+  .flower-top-right {
+    top: 15px;
+  }
+
+  .flower-bottom-left,
+  .flower-bottom-right {
+    bottom: 15px;
+  }
+
+  .invitation-text {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .couple-names {
+    font-size: 42px;
+  }
+
+  .ampersand {
+    font-size: 38px;
+  }
+
+  .invitation-message {
+    font-size: 18px;
+  }
+
+  .event-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .detail-separator {
+    width: 80px;
+    height: 1px;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .venue h3 {
+    font-size: 24px;
+  }
+}
+
+/* ================================
+   PRINT
+================================ */
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .wedding-card {
+    box-shadow: none;
+    max-width: none;
+    width: 100%;
+  }
+
+  .rsvp-btn {
+    display: none;
+  }
+}
+```
+
+ For the CSS above, your HTML can use classes such as `.wedding-card`, `.wedding-title`, `.couple-names`, `.event-details`, `.venue`, and `.rsvp-btn`.

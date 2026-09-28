@@ -260,3 +260,273 @@ Here’s an `index.html` for a simple Davangere-themed webpage:
 </body>
 </html>
 ```
+Sure — here’s a beautiful, elegant **marriage invitation/function page** style you can use with HTML.
+
+```
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff8f0;
+    color: #4a2525;
+}
+
+/* Main Invitation */
+.marriage-card {
+    width: 90%;
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 70px 50px;
+    text-align: center;
+    position: relative;
+
+    background:
+        linear-gradient(rgba(255, 248, 240, 0.94),
+                        rgba(255, 248, 240, 0.94)),
+        url("marriage-bg.jpg") center/cover;
+
+    border: 8px double #c99a3d;
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(80, 40, 20, 0.18);
+}
+
+/* Decorative corners */
+.marriage-card::before,
+.marriage-card::after {
+    content: "❦";
+    position: absolute;
+    color: #c99a3d;
+    font-size: 55px;
+}
+
+.marriage-card::before {
+    top: 15px;
+    left: 25px;
+}
+
+.marriage-card::after {
+    bottom: 15px;
+    right: 25px;
+}
+
+/* Small heading */
+.invite-text {
+    color: #a36b24;
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Main title */
+.title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    color: #8b1e3f;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Couple names */
+.couple-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    color: #6e1734;
+    font-weight: 600;
+    margin: 25px 0;
+}
+
+.ampersand {
+    color: #c99a3d;
+    font-size: 38px;
+    margin: 0 12px;
+}
+
+/* Description */
+.message {
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #654545;
+}
+
+/* Date */
+.date-box {
+    display: inline-block;
+    margin: 25px 0;
+    padding: 18px 40px;
+    border-top: 2px solid #c99a3d;
+    border-bottom: 2px solid #c99a3d;
+}
+
+.date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #8b1e3f;
+}
+
+/* Event details */
+.events {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.event {
+    width: 220px;
+    padding: 25px 15px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid #dfbd75;
+    border-radius: 15px;
+}
+
+.event h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    color: #8b1e3f;
+    margin-bottom: 8px;
+}
+
+.event p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Venue */
+.venue {
+    margin-top: 35px;
+}
+
+.venue h3 {
+    color: #a36b24;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.venue p {
+    line-height: 1.7;
+}
+
+/* Button */
+.rsvp-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 35px;
+    color: white;
+    background: linear-gradient(135deg, #8b1e3f, #b84a62);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+    box-shadow: 0 7px 18px rgba(139, 30, 63, 0.25);
+}
+
+.rsvp-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #6e1734, #9d304b);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+    .marriage-card {
+        width: 94%;
+        padding: 50px 20px;
+    }
+
+    .title {
+        font-size: 42px;
+    }
+
+    .couple-names {
+        font-size: 38px;
+    }
+
+    .ampersand {
+        display: block;
+        margin: 5px;
+    }
+
+    .date {
+        font-size: 24px;
+    }
+
+    .invite-text {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .event {
+        width: 100%;
+    }
+}
+```
+
+ You can pair it with HTML like:
+
+```
+<div class="marriage-card">
+
+    <div class="invite-text">Together with their families</div>
+
+    <h1 class="title">Wedding Invitation</h1>
+
+    <div class="couple-names">
+        Aarav
+        <span class="ampersand">&</span>
+        Ananya
+    </div>
+
+    <p class="message">
+        With hearts full of love and joy, we invite you to celebrate
+        the beginning of our beautiful journey together.
+    </p>
+
+    <div class="date-box">
+        <div class="date">Sunday • 18 October 2026</div>
+    </div>
+
+    <div class="events">
+
+        <div class="event">
+            <h3>Wedding Ceremony</h3>
+            <p>10:30 AM</p>
+            <p>Traditional Ceremony</p>
+        </div>
+
+        <div class="event">
+            <h3>Reception</h3>
+            <p>7:00 PM</p>
+            <p>Dinner & Celebration</p>
+        </div>
+
+    </div>
+
+    <div class="venue">
+        <h3>VENUE</h3>
+        <p>
+            Royal Garden Convention Hall<br>
+            Bengaluru, Karnataka
+        </p>
+    </div>
+
+    <a href="#" class="rsvp-btn">Join Our Celebration</a>
+
+</div>
+```
+
+ This gives you a **gold + burgundy + cream luxury wedding-card design**, with responsive mobile styling and separate ceremony/reception sections.
