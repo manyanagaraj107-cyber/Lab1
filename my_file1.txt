@@ -1,1 +1,12 @@
-"This is my very first Git experiment." 
+"This is my very first Git experiment."
+"This is my very first Git experiment."	
+"This is my very first Git experiment."	
+"This is my very first Git experiment."	
+"i love myself."	
+"This is my very first Git experiment."	
+"This is my very first Git experiment."	
+"This is my very first Git experiment."	
+"This is my very first Git experiment."	
+"This is my very first Git experiment."	
+"This is my very first Git experiment."	
+	
